@@ -1,5 +1,3 @@
-const { DataTypes } = require("sequelize/types");
-
 module.exports = (sequelize, Sequelize) => {
     const Order = sequelize.define("orders", {
       orderId: {
@@ -21,7 +19,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING
       },
       totalAmount: {
-        type: DataTypes.DECIMAL
+        type: Sequelize.NUMERIC
       },
       status: {
         type: Sequelize.STRING

@@ -1,15 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./app/models");
+const db = require("./models");
 
 const Order = db.orders;
 const Subscription = db.subscriptions;
 
 const app = express();
 
-require("./app/routes/order.routes")(app);
-require("./app/routes/subscription.routes")(app);
+require("./routes/order.routes")(app);
+require("./routes/subscription.routes")(app);
 
 
 //modelleri tablo olarak veritabanında oluşturması için
