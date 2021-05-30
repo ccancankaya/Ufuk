@@ -50,7 +50,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const orderId = req.params.id;
 
-    Tutorial.findByPk(orderId)
+    Order.findByPk(orderId)
       .then(data => {
         res.send(data);
       })

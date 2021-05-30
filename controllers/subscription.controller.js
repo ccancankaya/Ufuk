@@ -48,7 +48,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const subscriptionId = req.params.id;
 
-    Tutorial.findByPk(subscriptionId)
+    Subscription.findByPk(subscriptionId)
       .then(data => {
         res.send(data);
       })
